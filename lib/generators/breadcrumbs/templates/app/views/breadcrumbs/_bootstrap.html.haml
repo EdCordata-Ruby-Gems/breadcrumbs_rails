@@ -1,0 +1,8 @@
+- render_breadcrumbs.each do |breadcrumbs|
+  %ul.pagination
+    - breadcrumbs.breadcrumbs.each do |breadcrumb|
+      %li
+        - if breadcrumb.path
+          = link_to breadcrumb.name, breadcrumb.path
+        - else
+          = breadcrumb.name

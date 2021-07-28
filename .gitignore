@@ -1,7 +1,3 @@
-# IDE
 .idea/
-.atom/
-.vscode/
-
-# Gem builds
-breadcrumbs_rails-*.gem
+.bundle
+Gemfile.lock

@@ -1,0 +1,13 @@
+- render_breadcrumbs do |breadcrumbs|
+  .row.wrapper.border-bottom.white-bg.page-heading
+    .col-lg-10
+
+      %h2= breadcrumbs.title
+
+      %ol.breadcrumb
+        - breadcrumbs.breadcrumbs.each do |breadcrumb|
+          %li
+            - if breadcrumb.path
+              = link_to breadcrumb.name, breadcrumb.path
+            - else
+              = breadcrumb.name

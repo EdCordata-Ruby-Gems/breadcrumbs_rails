@@ -1,0 +1,13 @@
+<% render_breadcrumbs.each do |breadcrumbs| %>
+  <ul>
+    <% breadcrumbs.breadcrumbs.each do |breadcrumb| %>
+      <li>
+        <% if breadcrumb.path %>
+          <%= link_to breadcrumb.name, breadcrumb.path %>
+        <% else %>
+          <%= breadcrumb.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
